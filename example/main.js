@@ -5,6 +5,9 @@ import router from "@/router"
 import App from './App'
 import 'vue-transition.css'
 
+import vueRouterTransition from "src"
+Vue.use(vueRouterTransition,router)
+
 new Vue({
     el: '#app',
     router,

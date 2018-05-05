@@ -1,8 +1,8 @@
 <template>
     <div id="app">
-        <transition name="move-right-to-left">
+        <!-- <transition name="move-right-to-left"> -->
             <router-view id="app-router-view"></router-view>
-        </transition>
+        <!-- </transition> -->
     </div>
 </template>
 
