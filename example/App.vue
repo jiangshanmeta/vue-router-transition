@@ -1,13 +1,23 @@
 <template>
     <div id="app">
-        <!-- <transition name="move-right-to-left"> -->
-            <router-view id="app-router-view"></router-view>
-        <!-- </transition> -->
+        <vue-router-transition 
+            forward-name="move-right-to-left" 
+            backward-name="move-left-to-right"
+            v-on:after-enter="afterEnter"
+        >
+            <router-view class="app-router-view"></router-view>
+        </vue-router-transition>
     </div>
 </template>
 
 <script>
-
+export default{
+    methods:{
+        afterEnter(){
+            // console.log("test hook")
+        }
+    }
+}
 </script>
 
 <style>
@@ -21,7 +31,7 @@ html,body,#app {
     perspective: 1200px;
 }
 
-#app #app-router-view {
+#app .app-router-view {
     position: absolute;
     top: 0;
     left: 0;

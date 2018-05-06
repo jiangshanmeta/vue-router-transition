@@ -37,7 +37,7 @@ module.exports = {
             {
                 test:/\.vue$/,
                 loader:"vue-loader",
-                include:[examplePath],
+                include:[srcPath,examplePath],
             },
             {
                 test: /\.css$/,

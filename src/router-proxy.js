@@ -1,5 +1,7 @@
 let direction = 1;
 
+let curPageTs = 0;
+
 export default function(router){
     console.log(router);
 

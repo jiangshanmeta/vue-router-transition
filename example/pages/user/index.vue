@@ -1,8 +1,9 @@
 <template>
     <section>
+        <button @click="$router.go(-1)">返回首页</button>
         用户列表页
 
-        <button @click="back">返回</button>
+        <!-- <button @click="back">返回</button> -->
 
         <ul>
             <li v-for="item in users" :key="item.id">
