@@ -1,7 +1,5 @@
 
-
-<script>
-import {direction} from "./router-proxy"
+import {direction} from "./navigator"
 
 export default{
     functional:true,
@@ -18,7 +16,7 @@ export default{
         },
     },
     render(h,{props,listeners,children}){
-        console.log(direction)
+
         const data = {
             on:listeners,
             props:{
@@ -29,4 +27,3 @@ export default{
         return h('transition',data,children);
     },
 }
-</script>

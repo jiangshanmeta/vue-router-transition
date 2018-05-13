@@ -2,8 +2,19 @@ let direction = 1;
 
 let curPageTs = 0;
 
+let routerHistory = [];
+
+
 export default function(router){
-    console.log(router);
+
+    router.afterEach((to,from)=>{
+        
+        console.log(to,from);
+        // next()
+    })
+
+
+
 
     const oldMethods = {
         push:router.push,
@@ -41,7 +52,10 @@ export default function(router){
 
     }.bind(router)
 
+    // 可以加个标志位区分是js触发的popstate还是前进后退按钮触发的popstate
+    // 但是浏览器的前进和后退都会触发popstate => 区分popstate
     window.addEventListener("popstate",function(e){
+        console.log(e);
         direction = -1;
     })
 
